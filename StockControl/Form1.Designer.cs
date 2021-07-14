@@ -112,6 +112,8 @@ namespace StockControl
             this.dateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dispatchedTextBox = new System.Windows.Forms.TextBox();
             this.paidTextBox = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             firstNameLabel = new System.Windows.Forms.Label();
             lastNameLabel = new System.Windows.Forms.Label();
             titleLabel = new System.Windows.Forms.Label();
@@ -138,6 +140,7 @@ namespace StockControl
             ((System.ComponentModel.ISupportInitialize)(this.myStockBindingNavigator)).BeginInit();
             this.myStockBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.myStockDataGridView)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mystockCDataSet
@@ -190,7 +193,7 @@ namespace StockControl
             this.myStockBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.myStockBindingNavigator.Name = "myStockBindingNavigator";
             this.myStockBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.myStockBindingNavigator.Size = new System.Drawing.Size(2142, 25);
+            this.myStockBindingNavigator.Size = new System.Drawing.Size(2138, 25);
             this.myStockBindingNavigator.TabIndex = 0;
             this.myStockBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -221,6 +224,7 @@ namespace StockControl
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -229,14 +233,14 @@ namespace StockControl
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 15);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -244,7 +248,7 @@ namespace StockControl
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -253,13 +257,13 @@ namespace StockControl
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -276,7 +280,7 @@ namespace StockControl
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // myStockBindingNavigatorSaveItem
@@ -285,7 +289,7 @@ namespace StockControl
             this.myStockBindingNavigatorSaveItem.Enabled = false;
             this.myStockBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("myStockBindingNavigatorSaveItem.Image")));
             this.myStockBindingNavigatorSaveItem.Name = "myStockBindingNavigatorSaveItem";
-            this.myStockBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 20);
+            this.myStockBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.myStockBindingNavigatorSaveItem.Text = "Save Data";
             // 
             // myStockDataGridView
@@ -315,9 +319,9 @@ namespace StockControl
             this.dataGridViewTextBoxColumn20,
             this.dataGridViewTextBoxColumn21});
             this.myStockDataGridView.DataSource = this.myStockBindingSource;
-            this.myStockDataGridView.Location = new System.Drawing.Point(1033, 516);
+            this.myStockDataGridView.Location = new System.Drawing.Point(12, 410);
             this.myStockDataGridView.Name = "myStockDataGridView";
-            this.myStockDataGridView.Size = new System.Drawing.Size(1109, 208);
+            this.myStockDataGridView.Size = new System.Drawing.Size(2126, 362);
             this.myStockDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -449,359 +453,421 @@ namespace StockControl
             // firstNameLabel
             // 
             firstNameLabel.AutoSize = true;
-            firstNameLabel.Location = new System.Drawing.Point(13, 43);
+            firstNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            firstNameLabel.Location = new System.Drawing.Point(13, 192);
             firstNameLabel.Name = "firstNameLabel";
-            firstNameLabel.Size = new System.Drawing.Size(60, 13);
+            firstNameLabel.Size = new System.Drawing.Size(91, 16);
             firstNameLabel.TabIndex = 2;
             firstNameLabel.Text = "First Name:";
             // 
             // firstNameTextBox
             // 
             this.firstNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.myStockBindingSource, "FirstName", true));
-            this.firstNameTextBox.Location = new System.Drawing.Point(127, 40);
+            this.firstNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.firstNameTextBox.Location = new System.Drawing.Point(127, 189);
             this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(200, 20);
+            this.firstNameTextBox.Size = new System.Drawing.Size(200, 22);
             this.firstNameTextBox.TabIndex = 3;
             // 
             // lastNameLabel
             // 
             lastNameLabel.AutoSize = true;
-            lastNameLabel.Location = new System.Drawing.Point(13, 69);
+            lastNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lastNameLabel.Location = new System.Drawing.Point(13, 218);
             lastNameLabel.Name = "lastNameLabel";
-            lastNameLabel.Size = new System.Drawing.Size(61, 13);
+            lastNameLabel.Size = new System.Drawing.Size(90, 16);
             lastNameLabel.TabIndex = 4;
             lastNameLabel.Text = "Last Name:";
             // 
             // lastNameTextBox
             // 
             this.lastNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.myStockBindingSource, "LastName", true));
-            this.lastNameTextBox.Location = new System.Drawing.Point(127, 66);
+            this.lastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastNameTextBox.Location = new System.Drawing.Point(127, 215);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(200, 20);
+            this.lastNameTextBox.Size = new System.Drawing.Size(200, 22);
             this.lastNameTextBox.TabIndex = 5;
             // 
             // titleLabel
             // 
             titleLabel.AutoSize = true;
-            titleLabel.Location = new System.Drawing.Point(13, 95);
+            titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            titleLabel.Location = new System.Drawing.Point(13, 244);
             titleLabel.Name = "titleLabel";
-            titleLabel.Size = new System.Drawing.Size(30, 13);
+            titleLabel.Size = new System.Drawing.Size(44, 16);
             titleLabel.TabIndex = 6;
             titleLabel.Text = "Title:";
             // 
             // titleTextBox
             // 
             this.titleTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.myStockBindingSource, "Title", true));
-            this.titleTextBox.Location = new System.Drawing.Point(127, 92);
+            this.titleTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleTextBox.Location = new System.Drawing.Point(127, 241);
             this.titleTextBox.Name = "titleTextBox";
-            this.titleTextBox.Size = new System.Drawing.Size(200, 20);
+            this.titleTextBox.Size = new System.Drawing.Size(200, 22);
             this.titleTextBox.TabIndex = 7;
             // 
             // address1Label
             // 
             address1Label.AutoSize = true;
-            address1Label.Location = new System.Drawing.Point(13, 121);
+            address1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            address1Label.Location = new System.Drawing.Point(13, 270);
             address1Label.Name = "address1Label";
-            address1Label.Size = new System.Drawing.Size(54, 13);
+            address1Label.Size = new System.Drawing.Size(81, 16);
             address1Label.TabIndex = 8;
             address1Label.Text = "Address1:";
             // 
             // address1TextBox
             // 
             this.address1TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.myStockBindingSource, "Address1", true));
-            this.address1TextBox.Location = new System.Drawing.Point(127, 118);
+            this.address1TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.address1TextBox.Location = new System.Drawing.Point(127, 267);
             this.address1TextBox.Name = "address1TextBox";
-            this.address1TextBox.Size = new System.Drawing.Size(200, 20);
+            this.address1TextBox.Size = new System.Drawing.Size(200, 22);
             this.address1TextBox.TabIndex = 9;
             // 
             // address2Label
             // 
             address2Label.AutoSize = true;
-            address2Label.Location = new System.Drawing.Point(13, 147);
+            address2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            address2Label.Location = new System.Drawing.Point(13, 296);
             address2Label.Name = "address2Label";
-            address2Label.Size = new System.Drawing.Size(54, 13);
+            address2Label.Size = new System.Drawing.Size(81, 16);
             address2Label.TabIndex = 10;
             address2Label.Text = "Address2:";
             // 
             // address2TextBox
             // 
             this.address2TextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.myStockBindingSource, "Address2", true));
-            this.address2TextBox.Location = new System.Drawing.Point(127, 144);
+            this.address2TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.address2TextBox.Location = new System.Drawing.Point(127, 293);
             this.address2TextBox.Name = "address2TextBox";
-            this.address2TextBox.Size = new System.Drawing.Size(200, 20);
+            this.address2TextBox.Size = new System.Drawing.Size(200, 22);
             this.address2TextBox.TabIndex = 11;
             // 
             // post_CodeLabel
             // 
             post_CodeLabel.AutoSize = true;
-            post_CodeLabel.Location = new System.Drawing.Point(13, 173);
+            post_CodeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            post_CodeLabel.Location = new System.Drawing.Point(13, 322);
             post_CodeLabel.Name = "post_CodeLabel";
-            post_CodeLabel.Size = new System.Drawing.Size(59, 13);
+            post_CodeLabel.Size = new System.Drawing.Size(89, 16);
             post_CodeLabel.TabIndex = 12;
             post_CodeLabel.Text = "Post Code:";
             // 
             // post_CodeTextBox
             // 
             this.post_CodeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.myStockBindingSource, "Post Code", true));
-            this.post_CodeTextBox.Location = new System.Drawing.Point(127, 170);
+            this.post_CodeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.post_CodeTextBox.Location = new System.Drawing.Point(127, 319);
             this.post_CodeTextBox.Name = "post_CodeTextBox";
-            this.post_CodeTextBox.Size = new System.Drawing.Size(200, 20);
+            this.post_CodeTextBox.Size = new System.Drawing.Size(200, 22);
             this.post_CodeTextBox.TabIndex = 13;
             // 
             // orderIDLabel
             // 
             orderIDLabel.AutoSize = true;
-            orderIDLabel.Location = new System.Drawing.Point(13, 199);
+            orderIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            orderIDLabel.Location = new System.Drawing.Point(13, 348);
             orderIDLabel.Name = "orderIDLabel";
-            orderIDLabel.Size = new System.Drawing.Size(50, 13);
+            orderIDLabel.Size = new System.Drawing.Size(75, 16);
             orderIDLabel.TabIndex = 14;
             orderIDLabel.Text = "Order ID:";
             // 
             // orderIDTextBox
             // 
             this.orderIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.myStockBindingSource, "OrderID", true));
-            this.orderIDTextBox.Location = new System.Drawing.Point(127, 196);
+            this.orderIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderIDTextBox.Location = new System.Drawing.Point(127, 345);
             this.orderIDTextBox.Name = "orderIDTextBox";
-            this.orderIDTextBox.Size = new System.Drawing.Size(200, 20);
+            this.orderIDTextBox.Size = new System.Drawing.Size(200, 22);
             this.orderIDTextBox.TabIndex = 15;
             // 
             // itemIDLabel
             // 
             itemIDLabel.AutoSize = true;
-            itemIDLabel.Location = new System.Drawing.Point(356, 43);
+            itemIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            itemIDLabel.Location = new System.Drawing.Point(364, 192);
             itemIDLabel.Name = "itemIDLabel";
-            itemIDLabel.Size = new System.Drawing.Size(44, 13);
+            itemIDLabel.Size = new System.Drawing.Size(65, 16);
             itemIDLabel.TabIndex = 16;
             itemIDLabel.Text = "Item ID:";
             // 
             // itemIDTextBox
             // 
             this.itemIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.myStockBindingSource, "ItemID", true));
-            this.itemIDTextBox.Location = new System.Drawing.Point(470, 40);
+            this.itemIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemIDTextBox.Location = new System.Drawing.Point(497, 189);
             this.itemIDTextBox.Name = "itemIDTextBox";
-            this.itemIDTextBox.Size = new System.Drawing.Size(200, 20);
+            this.itemIDTextBox.Size = new System.Drawing.Size(200, 22);
             this.itemIDTextBox.TabIndex = 17;
             // 
             // quantityLabel
             // 
             quantityLabel.AutoSize = true;
-            quantityLabel.Location = new System.Drawing.Point(356, 69);
+            quantityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            quantityLabel.Location = new System.Drawing.Point(364, 218);
             quantityLabel.Name = "quantityLabel";
-            quantityLabel.Size = new System.Drawing.Size(49, 13);
+            quantityLabel.Size = new System.Drawing.Size(70, 16);
             quantityLabel.TabIndex = 18;
             quantityLabel.Text = "Quantity:";
             // 
             // quantityTextBox
             // 
             this.quantityTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.myStockBindingSource, "Quantity", true));
-            this.quantityTextBox.Location = new System.Drawing.Point(470, 66);
+            this.quantityTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantityTextBox.Location = new System.Drawing.Point(497, 215);
             this.quantityTextBox.Name = "quantityTextBox";
-            this.quantityTextBox.Size = new System.Drawing.Size(200, 20);
+            this.quantityTextBox.Size = new System.Drawing.Size(200, 22);
             this.quantityTextBox.TabIndex = 19;
             // 
             // vegetableLabel
             // 
             vegetableLabel.AutoSize = true;
-            vegetableLabel.Location = new System.Drawing.Point(356, 95);
+            vegetableLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            vegetableLabel.Location = new System.Drawing.Point(364, 244);
             vegetableLabel.Name = "vegetableLabel";
-            vegetableLabel.Size = new System.Drawing.Size(58, 13);
+            vegetableLabel.Size = new System.Drawing.Size(86, 16);
             vegetableLabel.TabIndex = 20;
             vegetableLabel.Text = "Vegetable:";
             // 
             // vegetableTextBox
             // 
             this.vegetableTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.myStockBindingSource, "Vegetable", true));
-            this.vegetableTextBox.Location = new System.Drawing.Point(470, 92);
+            this.vegetableTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vegetableTextBox.Location = new System.Drawing.Point(497, 241);
             this.vegetableTextBox.Name = "vegetableTextBox";
-            this.vegetableTextBox.Size = new System.Drawing.Size(200, 20);
+            this.vegetableTextBox.Size = new System.Drawing.Size(200, 22);
             this.vegetableTextBox.TabIndex = 21;
             // 
             // tYPELabel
             // 
             tYPELabel.AutoSize = true;
-            tYPELabel.Location = new System.Drawing.Point(356, 121);
+            tYPELabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tYPELabel.Location = new System.Drawing.Point(364, 270);
             tYPELabel.Name = "tYPELabel";
-            tYPELabel.Size = new System.Drawing.Size(38, 13);
+            tYPELabel.Size = new System.Drawing.Size(56, 16);
             tYPELabel.TabIndex = 22;
             tYPELabel.Text = "TYPE:";
             // 
             // tYPETextBox
             // 
             this.tYPETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.myStockBindingSource, "TYPE", true));
-            this.tYPETextBox.Location = new System.Drawing.Point(470, 118);
+            this.tYPETextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tYPETextBox.Location = new System.Drawing.Point(497, 267);
             this.tYPETextBox.Name = "tYPETextBox";
-            this.tYPETextBox.Size = new System.Drawing.Size(200, 20);
+            this.tYPETextBox.Size = new System.Drawing.Size(200, 22);
             this.tYPETextBox.TabIndex = 23;
             // 
             // nAMELabel
             // 
             nAMELabel.AutoSize = true;
-            nAMELabel.Location = new System.Drawing.Point(356, 147);
+            nAMELabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nAMELabel.Location = new System.Drawing.Point(364, 296);
             nAMELabel.Name = "nAMELabel";
-            nAMELabel.Size = new System.Drawing.Size(41, 13);
+            nAMELabel.Size = new System.Drawing.Size(60, 16);
             nAMELabel.TabIndex = 24;
             nAMELabel.Text = "NAME:";
             // 
             // nAMETextBox
             // 
             this.nAMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.myStockBindingSource, "NAME", true));
-            this.nAMETextBox.Location = new System.Drawing.Point(470, 144);
+            this.nAMETextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nAMETextBox.Location = new System.Drawing.Point(497, 293);
             this.nAMETextBox.Name = "nAMETextBox";
-            this.nAMETextBox.Size = new System.Drawing.Size(200, 20);
+            this.nAMETextBox.Size = new System.Drawing.Size(200, 22);
             this.nAMETextBox.TabIndex = 25;
             // 
             // uNIT_SIZELabel
             // 
             uNIT_SIZELabel.AutoSize = true;
-            uNIT_SIZELabel.Location = new System.Drawing.Point(356, 173);
+            uNIT_SIZELabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            uNIT_SIZELabel.Location = new System.Drawing.Point(364, 322);
             uNIT_SIZELabel.Name = "uNIT_SIZELabel";
-            uNIT_SIZELabel.Size = new System.Drawing.Size(63, 13);
+            uNIT_SIZELabel.Size = new System.Drawing.Size(94, 16);
             uNIT_SIZELabel.TabIndex = 26;
             uNIT_SIZELabel.Text = "UNIT SIZE:";
             // 
             // uNIT_SIZETextBox
             // 
             this.uNIT_SIZETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.myStockBindingSource, "UNIT SIZE", true));
-            this.uNIT_SIZETextBox.Location = new System.Drawing.Point(470, 170);
+            this.uNIT_SIZETextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uNIT_SIZETextBox.Location = new System.Drawing.Point(497, 319);
             this.uNIT_SIZETextBox.Name = "uNIT_SIZETextBox";
-            this.uNIT_SIZETextBox.Size = new System.Drawing.Size(200, 20);
+            this.uNIT_SIZETextBox.Size = new System.Drawing.Size(200, 22);
             this.uNIT_SIZETextBox.TabIndex = 27;
             // 
             // sTOCK_LEVELLabel
             // 
             sTOCK_LEVELLabel.AutoSize = true;
-            sTOCK_LEVELLabel.Location = new System.Drawing.Point(356, 199);
+            sTOCK_LEVELLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            sTOCK_LEVELLabel.Location = new System.Drawing.Point(364, 348);
             sTOCK_LEVELLabel.Name = "sTOCK_LEVELLabel";
-            sTOCK_LEVELLabel.Size = new System.Drawing.Size(82, 13);
+            sTOCK_LEVELLabel.Size = new System.Drawing.Size(125, 16);
             sTOCK_LEVELLabel.TabIndex = 28;
             sTOCK_LEVELLabel.Text = "STOCK LEVEL:";
             // 
             // sTOCK_LEVELTextBox
             // 
             this.sTOCK_LEVELTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.myStockBindingSource, "STOCK LEVEL", true));
-            this.sTOCK_LEVELTextBox.Location = new System.Drawing.Point(470, 196);
+            this.sTOCK_LEVELTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sTOCK_LEVELTextBox.Location = new System.Drawing.Point(497, 345);
             this.sTOCK_LEVELTextBox.Name = "sTOCK_LEVELTextBox";
-            this.sTOCK_LEVELTextBox.Size = new System.Drawing.Size(200, 20);
+            this.sTOCK_LEVELTextBox.Size = new System.Drawing.Size(200, 22);
             this.sTOCK_LEVELTextBox.TabIndex = 29;
             // 
             // rEODER_LEVELLabel
             // 
             rEODER_LEVELLabel.AutoSize = true;
-            rEODER_LEVELLabel.Location = new System.Drawing.Point(91, 297);
+            rEODER_LEVELLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            rEODER_LEVELLabel.Location = new System.Drawing.Point(747, 192);
             rEODER_LEVELLabel.Name = "rEODER_LEVELLabel";
-            rEODER_LEVELLabel.Size = new System.Drawing.Size(92, 13);
+            rEODER_LEVELLabel.Size = new System.Drawing.Size(139, 16);
             rEODER_LEVELLabel.TabIndex = 30;
             rEODER_LEVELLabel.Text = "REODER LEVEL:";
             // 
             // rEODER_LEVELTextBox
             // 
             this.rEODER_LEVELTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.myStockBindingSource, "REODER LEVEL", true));
-            this.rEODER_LEVELTextBox.Location = new System.Drawing.Point(205, 294);
+            this.rEODER_LEVELTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rEODER_LEVELTextBox.Location = new System.Drawing.Point(921, 189);
             this.rEODER_LEVELTextBox.Name = "rEODER_LEVELTextBox";
-            this.rEODER_LEVELTextBox.Size = new System.Drawing.Size(200, 20);
+            this.rEODER_LEVELTextBox.Size = new System.Drawing.Size(200, 22);
             this.rEODER_LEVELTextBox.TabIndex = 31;
+            this.rEODER_LEVELTextBox.TextChanged += new System.EventHandler(this.rEODER_LEVELTextBox_TextChanged);
             // 
             // mAX_STOCK_LEVELLabel
             // 
             mAX_STOCK_LEVELLabel.AutoSize = true;
-            mAX_STOCK_LEVELLabel.Location = new System.Drawing.Point(91, 323);
+            mAX_STOCK_LEVELLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            mAX_STOCK_LEVELLabel.Location = new System.Drawing.Point(747, 218);
             mAX_STOCK_LEVELLabel.Name = "mAX_STOCK_LEVELLabel";
-            mAX_STOCK_LEVELLabel.Size = new System.Drawing.Size(108, 13);
+            mAX_STOCK_LEVELLabel.Size = new System.Drawing.Size(165, 16);
             mAX_STOCK_LEVELLabel.TabIndex = 32;
             mAX_STOCK_LEVELLabel.Text = "MAX STOCK LEVEL:";
             // 
             // mAX_STOCK_LEVELTextBox
             // 
             this.mAX_STOCK_LEVELTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.myStockBindingSource, "MAX STOCK LEVEL", true));
-            this.mAX_STOCK_LEVELTextBox.Location = new System.Drawing.Point(205, 320);
+            this.mAX_STOCK_LEVELTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mAX_STOCK_LEVELTextBox.Location = new System.Drawing.Point(921, 215);
             this.mAX_STOCK_LEVELTextBox.Name = "mAX_STOCK_LEVELTextBox";
-            this.mAX_STOCK_LEVELTextBox.Size = new System.Drawing.Size(200, 20);
+            this.mAX_STOCK_LEVELTextBox.Size = new System.Drawing.Size(200, 22);
             this.mAX_STOCK_LEVELTextBox.TabIndex = 33;
             // 
             // customerIDLabel
             // 
             customerIDLabel.AutoSize = true;
-            customerIDLabel.Location = new System.Drawing.Point(91, 349);
+            customerIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            customerIDLabel.Location = new System.Drawing.Point(747, 244);
             customerIDLabel.Name = "customerIDLabel";
-            customerIDLabel.Size = new System.Drawing.Size(68, 13);
+            customerIDLabel.Size = new System.Drawing.Size(102, 16);
             customerIDLabel.TabIndex = 34;
             customerIDLabel.Text = "Customer ID:";
             // 
             // customerIDTextBox
             // 
             this.customerIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.myStockBindingSource, "CustomerID", true));
-            this.customerIDTextBox.Location = new System.Drawing.Point(205, 346);
+            this.customerIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerIDTextBox.Location = new System.Drawing.Point(921, 241);
             this.customerIDTextBox.Name = "customerIDTextBox";
-            this.customerIDTextBox.Size = new System.Drawing.Size(200, 20);
+            this.customerIDTextBox.Size = new System.Drawing.Size(200, 22);
             this.customerIDTextBox.TabIndex = 35;
             // 
             // oderIDLabel
             // 
             oderIDLabel.AutoSize = true;
-            oderIDLabel.Location = new System.Drawing.Point(91, 375);
+            oderIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            oderIDLabel.Location = new System.Drawing.Point(747, 270);
             oderIDLabel.Name = "oderIDLabel";
-            oderIDLabel.Size = new System.Drawing.Size(47, 13);
+            oderIDLabel.Size = new System.Drawing.Size(70, 16);
             oderIDLabel.TabIndex = 36;
             oderIDLabel.Text = "Oder ID:";
             // 
             // oderIDTextBox
             // 
             this.oderIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.myStockBindingSource, "OderID", true));
-            this.oderIDTextBox.Location = new System.Drawing.Point(205, 372);
+            this.oderIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oderIDTextBox.Location = new System.Drawing.Point(921, 267);
             this.oderIDTextBox.Name = "oderIDTextBox";
-            this.oderIDTextBox.Size = new System.Drawing.Size(200, 20);
+            this.oderIDTextBox.Size = new System.Drawing.Size(200, 22);
             this.oderIDTextBox.TabIndex = 37;
             // 
             // dateLabel
             // 
             dateLabel.AutoSize = true;
-            dateLabel.Location = new System.Drawing.Point(91, 402);
+            dateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dateLabel.Location = new System.Drawing.Point(747, 297);
             dateLabel.Name = "dateLabel";
-            dateLabel.Size = new System.Drawing.Size(33, 13);
+            dateLabel.Size = new System.Drawing.Size(47, 16);
             dateLabel.TabIndex = 38;
             dateLabel.Text = "Date:";
             // 
             // dateDateTimePicker
             // 
             this.dateDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.myStockBindingSource, "Date", true));
-            this.dateDateTimePicker.Location = new System.Drawing.Point(205, 398);
+            this.dateDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateDateTimePicker.Location = new System.Drawing.Point(921, 293);
             this.dateDateTimePicker.Name = "dateDateTimePicker";
-            this.dateDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.dateDateTimePicker.Size = new System.Drawing.Size(200, 22);
             this.dateDateTimePicker.TabIndex = 39;
             // 
             // dispatchedLabel
             // 
             dispatchedLabel.AutoSize = true;
-            dispatchedLabel.Location = new System.Drawing.Point(91, 427);
+            dispatchedLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dispatchedLabel.Location = new System.Drawing.Point(747, 322);
             dispatchedLabel.Name = "dispatchedLabel";
-            dispatchedLabel.Size = new System.Drawing.Size(64, 13);
+            dispatchedLabel.Size = new System.Drawing.Size(93, 16);
             dispatchedLabel.TabIndex = 40;
             dispatchedLabel.Text = "Dispatched:";
             // 
             // dispatchedTextBox
             // 
             this.dispatchedTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.myStockBindingSource, "Dispatched", true));
-            this.dispatchedTextBox.Location = new System.Drawing.Point(205, 424);
+            this.dispatchedTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dispatchedTextBox.Location = new System.Drawing.Point(921, 319);
             this.dispatchedTextBox.Name = "dispatchedTextBox";
-            this.dispatchedTextBox.Size = new System.Drawing.Size(200, 20);
+            this.dispatchedTextBox.Size = new System.Drawing.Size(200, 22);
             this.dispatchedTextBox.TabIndex = 41;
             // 
             // paidLabel
             // 
             paidLabel.AutoSize = true;
-            paidLabel.Location = new System.Drawing.Point(91, 453);
+            paidLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            paidLabel.Location = new System.Drawing.Point(747, 348);
             paidLabel.Name = "paidLabel";
-            paidLabel.Size = new System.Drawing.Size(31, 13);
+            paidLabel.Size = new System.Drawing.Size(46, 16);
             paidLabel.TabIndex = 42;
             paidLabel.Text = "Paid:";
             // 
             // paidTextBox
             // 
             this.paidTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.myStockBindingSource, "Paid", true));
-            this.paidTextBox.Location = new System.Drawing.Point(205, 450);
+            this.paidTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.paidTextBox.Location = new System.Drawing.Point(921, 345);
             this.paidTextBox.Name = "paidTextBox";
-            this.paidTextBox.Size = new System.Drawing.Size(200, 20);
+            this.paidTextBox.Size = new System.Drawing.Size(200, 22);
             this.paidTextBox.TabIndex = 43;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(63, 64);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(833, 100);
+            this.panel1.TabIndex = 44;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(89, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(712, 72);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Stock Control System";
             // 
             // Form1
             // 
@@ -809,6 +875,7 @@ namespace StockControl
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(firstNameLabel);
             this.Controls.Add(this.firstNameTextBox);
             this.Controls.Add(lastNameLabel);
@@ -862,6 +929,7 @@ namespace StockControl
             this.myStockBindingNavigator.ResumeLayout(false);
             this.myStockBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.myStockDataGridView)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -929,6 +997,8 @@ namespace StockControl
         private System.Windows.Forms.DateTimePicker dateDateTimePicker;
         private System.Windows.Forms.TextBox dispatchedTextBox;
         private System.Windows.Forms.TextBox paidTextBox;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

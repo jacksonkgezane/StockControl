@@ -23,5 +23,10 @@ namespace StockControl
             this.myStockTableAdapter.Fill(this.mystockCDataSet.MyStock);
 
         }
+
+        private void rEODER_LEVELTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
